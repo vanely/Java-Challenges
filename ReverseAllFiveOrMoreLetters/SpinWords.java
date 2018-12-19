@@ -41,7 +41,7 @@ public class SpinWords {
     public String spinWords2(String sentence) {
         
         return Arrays.stream(sentence.split(" "))
-            .map(i -> i.length() > 4 ? new StringBuilder(i).reverse().toString() : i)
+            .map(word -> word.length() > 4 ? new StringBuilder(word).reverse().toString() : word)
             .collect(Collectors.joining(" "));
     
     }
